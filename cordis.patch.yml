@@ -1,0 +1,7 @@
+# @lim324/dsh-layout-persist bundle patch: mount the host row. The host half is
+# a no-op (it exists only to make the package a valid profile bundle); the
+# browser half is discovered from the package's `dsh.client.platform: web`
+# metadata by the Web shell.
+- insert:
+    - id: layout-persist
+      name: '@lim324/dsh-layout-persist'

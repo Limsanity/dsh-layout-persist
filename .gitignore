@@ -1,0 +1,12 @@
+# Dependencies
+node_modules/
+
+# Build output is COMMITTED on purpose: the profile links this directory, so a
+# machine without a dev toolchain must still be able to mount the plugin.
+# Regenerate with `pnpm run build`.
+
+# OS and tooling residue
+.DS_Store
+*.log
+coverage/
+*.tsbuildinfo

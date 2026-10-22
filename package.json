@@ -1,0 +1,49 @@
+{
+  "name": "@lim324/dsh-layout-persist",
+  "version": "0.1.0",
+  "description": "Persist the DeepSeek Harness Web frame's left sidebar and right panel widths across restarts, which the shipped layout store keeps in memory only.",
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Limsanity/dsh-layout-persist.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "watch": "tsdown --watch",
+    "smoke": "node scripts/smoke.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "tsdown": "^0.22.14",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0"
+  }
+}
